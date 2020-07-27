@@ -331,6 +331,25 @@ void remreps (LInt l){
 	}
 }
 
+//26
+LInt rotateL (LInt l){
+    if(!(l == NULL || l->prox == NULL)){
+        
+        LInt aux = l;
+        int valor = aux->valor; 
+        
+        while (aux->prox != NULL){
+            aux->valor = aux->prox->valor;
+            aux = aux -> prox;
+        }
+        
+        aux -> valor = valor;
+        
+    }
+    
+    return l;
+}
+
 //28
 int altura (ABin a){
     int r=0;
